@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>东具咖啡-咖啡器具选购、冲煮知识与使用指南</title>
+<meta name="description" content="东具咖啡专注咖啡器具与冲煮方式的知识分享，涵盖手冲、意式、法压、冷萃等常见器具的选购要点、使用步骤、清洁保养与常见问题，帮助你在家稳定做出一杯好咖啡。">
+<meta name="keywords" content="东具咖啡,咖啡器具,手冲咖啡,意式咖啡机,法压壶,冷萃壶,咖啡冲煮,咖啡器具选购">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+  :root{
+    --bean-dark:#2b1c14;
+    --bean:#4a2f22;
+    --coffee:#7b4a2d;
+    --crema:#c98a52;
+    --latte:#e8d3bd;
+    --milk:#faf5ef;
+    --paper:#fffdfa;
+    --line:#e4d6c7;
+    --text:#33251d;
+    --muted:#7a6a5e;
+    --green:#5c7a52;
+    --radius:14px;
+    --shadow:0 6px 22px rgba(74,47,34,.10);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+    background:var(--milk);
+    color:var(--text);
+    line-height:1.75;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:var(--coffee);text-decoration:none;}
+  a:hover{color:var(--bean);text-decoration:underline;}
+  h1,h2,h3{line-height:1.35;color:var(--bean-dark);margin:0 0 .6em;}
+  p{margin:0 0 1em;}
+  ul,ol{margin:0 0 1em;padding-left:1.25em;}
+  li{margin-bottom:.45em;}
+
+  .wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px;}
+
+  /* ---------- 顶部 ---------- */
+  .topbar{
+    background:var(--bean-dark);
+    color:#e9dccd;
+    font-size:13px;
+    letter-spacing:.02em;
+  }
+  .topbar .wrap{
+    display:flex;flex-wrap:wrap;gap:8px 20px;
+    align-items:center;justify-content:space-between;
+    padding-top:8px;padding-bottom:8px;
+  }
+  .topbar span{opacity:.85;}
+
+  header.site-head{
+    background:linear-gradient(180deg,#fffdfa 0%,#f7eee4 100%);
+    border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:40;
+    backdrop-filter:saturate(140%) blur(6px);
+  }
+  .head-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:18px;padding-top:14px;padding-bottom:14px;
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand .mark{
+    width:44px;height:44px;flex:0 0 44px;border-radius:12px;
+    background:radial-gradient(circle at 32% 28%,#8a5734,#3a2418);
+    display:flex;align-items:center;justify-content:center;
+    color:#f3e2cd;font-weight:700;font-size:19px;
+    box-shadow:inset 0 0 0 2px rgba(255,255,255,.14);
+  }
+  .brand b{display:block;font-size:19px;color:var(--bean-dark);letter-spacing:.04em;}
+  .brand small{display:block;font-size:12px;color:var(--muted);letter-spacing:.14em;}
+
+  nav.main-nav ul{
+    list-style:none;display:flex;flex-wrap:wrap;gap:6px 4px;
+    margin:0;padding:0;
+  }
+  nav.main-nav a{
+    display:block;padding:8px 14px;border-radius:999px;
+    font-size:15px;color:var(--bean);text-decoration:none;
+    transition:background .2s,color .2s;
+  }
+  nav.main-nav a:hover{background:var(--latte);color:var(--bean-dark);text-decoration:none;}
+
+  /* ---------- 首屏 ---------- */
+  .hero{
+    background:
+      radial-gradient(900px 380px at 88% -10%,rgba(201,138,82,.28),transparent 70%),
+      linear-gradient(160deg,#33221a 0%,#4a2f22 58%,#5d3a27 100%);
+    color:#f4e8da;
+    padding:56px 0 60px;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.15fr .85fr;
+    gap:44px;align-items:center;
+  }
+  .hero h1{
+    color:#fff8ef;font-size:34px;letter-spacing:.02em;margin-bottom:18px;
+  }
+  .hero h1 em{
+    font-style:normal;color:var(--crema);
+  }
+  .hero p.lead{
+    font-size:16.5px;color:#e6d5c3;max-width:56ch;margin-bottom:22px;
+  }
+  .hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px;}
+  .hero-tags span{
+    font-size:13px;padding:5px 12px;border-radius:999px;
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.18);
+    color:#f0e2d2;
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;}
+  .btn{
+    display:inline-block;padding:12px 24px;border-radius:999px;
+    font-size:15px;font-weight:600;text-decoration:none;
+    transition:transform .15s,box-shadow .2s,background .2s;
+  }
+  .btn-primary{background:var(--crema);color:#2b1c14;}
+  .btn-primary:hover{background:#d99a63;color:#2b1c14;text-decoration:none;transform:translateY(-1px);}
+  .btn-ghost{border:1px solid rgba(255,255,255,.42);color:#f6ebdd;}
+  .btn-ghost:hover{background:rgba(255,255,255,.12);text-decoration:none;color:#fff;}
+
+  .hero-card{
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:var(--radius);
+    padding:24px 24px 20px;
+  }
+  .hero-card h2{
+    font-size:16px;color:#ffe9d2;margin-bottom:14px;letter-spacing:.06em;
+  }
+  .hero-card ol{margin:0;padding-left:1.1em;color:#e8d9c8;font-size:15px;}
+  .hero-card li{margin-bottom:10px;}
+  .hero-card li b{color:#fff;}
+
+  /* ---------- 通用区块 ---------- */
+  section{padding:56px 0;}
+  section.alt{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .sec-head{margin-bottom:30px;max-width:74ch;}
+  .sec-head h2{font-size:26px;position:relative;padding-left:16px;}
+  .sec-head h2::before{
+    content:"";position:absolute;left:0;top:.18em;bottom:.18em;width:5px;
+    border-radius:3px;background:linear-gradient(180deg,var(--crema),var(--coffee));
+  }
+  .sec-head p{color:var(--muted);margin-bottom:0;}
+
+  /* ---------- 器具分类 ---------- */
+  .cat-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  }
+  .cat-card{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 22px 18px;box-shadow:var(--shadow);
+    display:flex;flex-direction:column;
+  }
+  .cat-card .icon{
+    width:40px;height:40px;border-radius:10px;margin-bottom:14px;
+    background:linear-gradient(140deg,#e8d3bd,#c98a52);
+    display:flex;align-items:center;justify-content:center;
+    font-size:18px;color:#3a2418;font-weight:700;
+  }
+  .cat-card h3{font-size:18px;margin-bottom:8px;}
+  .cat-card p{font-size:14.5px;color:var(--muted);margin-bottom:14px;}
+  .cat-card ul{font-size:14.5px;padding-left:1.1em;margin-bottom:0;color:#4d3c31;}
+  .cat-card ul li::marker{color:var(--crema);}
+
+  /* ---------- 冲煮步骤 ---------- */
+  .steps{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:step;
+  }
+  .step{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px;position:relative;
+  }
+  .step::before{
+    counter-increment:step;content:counter(step);
+    display:inline-flex;align-items:center;justify-content:center;
+    width:30px;height:30px;border-radius:50%;
+    background:var(--bean);color:#f6e8d8;font-size:14px;font-weight:700;
+    margin-bottom:12px;
+  }
+  .step h3{font-size:16px;margin-bottom:8px;}
+  .step p{font-size:14.5px;color:var(--muted);margin-bottom:0;}
+
+  /* ---------- 选购清单 ---------- */
+  .buy-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:start;}
+  .buy-list{list-style:none;padding:0;margin:0;}
+  .buy-list li{
+    background:var(--paper);border:1px solid var(--line);border-radius:12px;
+    padding:16px 18px;margin-bottom:12px;
+  }
+  .buy-list li b{display:block;color:var(--bean);font-size:15.5px;margin-bottom:4px;}
+  .buy-list li span{font-size:14.5px;color:var(--muted);}
+
+  .note-box{
+    background:linear-gradient(160deg,#fdf6ee,#f6e8d8);
+    border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;
+  }
+  .note-box h3{font-size:17px;margin-bottom:12px;}
+  .note-box ul{padding-left:1.1em;font-size:14.5px;color:#4d3c31;margin-bottom:0;}
+
+  /* ---------- 对比表 ---------- */
+  .table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);}
+  table{border-collapse:collapse;width:100%;min-width:620px;font-size:14.5px;}
+  th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+  thead th{background:#f3e7d9;color:var(--bean-dark);font-size:14px;letter-spacing:.03em;white-space:nowrap;}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:nth-child(even){background:#fdfaf6;}
+
+  /* ---------- 文章列表 ---------- */
+  .art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  article.post{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;display:flex;flex-direction:column;box-shadow:var(--shadow);
+  }
+  article.post .tag{
+    align-self:flex-start;font-size:12px;letter-spacing:.08em;
+    color:#7a4a2c;background:#f4e4d3;border-radius:999px;padding:3px 10px;margin-bottom:12px;
+  }
+  article.post h3{font-size:17px;margin-bottom:8px;}
+  article.post p{font-size:14.5px;color:var(--muted);margin-bottom:14px;}
+  article.post .more{margin-top:auto;font-size:14px;font-weight:600;}
+
+  /* ---------- 保养 ---------- */
+  .care-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+  .care-item{
+    background:var(--paper);border-left:4px solid var(--crema);
+    border-radius:0 12px 12px 0;padding:18px 20px;
+    border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  .care-item h3{font-size:16.5px;margin-bottom:8px;}
+  .care-item p{font-size:14.5px;color:var(--muted);margin-bottom:0;}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:900px;}
+  details{
+    background:var(--paper);border:1px solid var(--line);border-radius:12px;
+    margin-bottom:12px;padding:0 18px;
+  }
+  details[open]{box-shadow:var(--shadow);}
+  summary{
+    cursor:pointer;list-style:none;padding:16px 0;
+    font-weight:600;font-size:15.5px;color:var(--bean);
+    display:flex;align-items:center;justify-content:space-between;gap:14px;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{
+    content:"+";font-size:20px;color:var(--crema);font-weight:400;line-height:1;
+    transition:transform .2s;
+  }
+  details[open] summary::after{content:"–";}
+  details p{font-size:14.8px;color:#4d3c31;padding-bottom:16px;margin:0;}
+
+  /* ---------- 侧栏式提示条 ---------- */
+  .tip-strip{
+    background:linear-gradient(90deg,#4a2f22,#6b4128);
+    color:#f2e3d2;border-radius:var(--radius);
+    padding:24px 26px;display:flex;flex-wrap:wrap;
+    gap:16px 28px;align-items:center;justify-content:space-between;
+  }
+  .tip-strip p{margin:0;font-size:15px;max-width:70ch;}
+  .tip-strip strong{color:#ffd9ae;}
+
+  /* ---------- 页脚 ---------- */
+  footer.site-foot{
+    background:#241811;color:#c9b6a4;padding:46px 0 24px;font-size:14.5px;
+  }
+  .foot-grid{
+    display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;
+  }
+  footer h3{color:#f3e3d1;font-size:15px;letter-spacing:.06em;margin-bottom:12px;}
+  footer ul{list-style:none;padding:0;margin:0;}
+  footer li{margin-bottom:8px;}
+  footer a{color:#c9b6a4;}
+  footer a:hover{color:#f3e3d1;}
+  .foot-brand p{color:#a4907e;font-size:14px;max-width:38ch;}
+  .foot-bottom{
+    margin-top:32px;padding-top:18px;border-top:1px solid rgba(255,255,255,.10);
+    display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;
+    font-size:13px;color:#8d7a69;
+  }
+
+  /* ---------- 响应式 ---------- */
+  @media (max-width:1000px){
+    .hero-grid{grid-template-columns:1fr;gap:32px;}
+    .cat-grid{grid-template-columns:repeat(2,1fr);}
+    .steps{grid-template-columns:repeat(2,1fr);}
+    .art-grid{grid-template-columns:repeat(2,1fr);}
+    .buy-grid{grid-template-columns:1fr;gap:24px;}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:720px){
+    body{font-size:15.5px;}
+    .head-inner{flex-direction:column;align-items:flex-start;gap:12px;}
+    nav.main-nav ul{gap:4px 2px;}
+    nav.main-nav a{padding:7px 11px;font-size:14.5px;}
+    .hero{padding:40px 0 44px;}
+    .hero h1{font-size:26px;}
+    section{padding:40px 0;}
+    .sec-head h2{font-size:22px;}
+    .cat-grid,.steps,.art-grid,.care-grid{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr;}
+    .tip-strip{padding:20px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>东具咖啡 · 咖啡器具与冲煮知识分享</span>
+    <span>选购要点 · 使用步骤 · 清洁保养 · 常见问题</span>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">东</div>
+      <div>
+        <b>东具咖啡</b>
+        <small>COFFEE GEAR &amp; BREWING</small>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a href="#category">器具分类</a></li>
+        <li><a href="#brew">冲煮步骤</a></li>
+        <li><a href="#buy">选购要点</a></li>
+        <li><a href="#compare">方式对比</a></li>
+        <li><a href="#care">清洁保养</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <h1 id="hero-title">东具咖啡：把<em>咖啡器具</em>用对，比买贵更重要</h1>
+        <p class="lead">
+          很多人以为在家做咖啡难，其实卡住的地方往往不是技术，而是器具选得不对、参数没方向。
+          这里围绕手冲、意式、法压、冷萃等常见方式，讲清楚每类器具适合谁、怎么用、怎么保养，
+          让你用手里已有的设备，先稳定做出一杯能喝的咖啡，再慢慢往上调。
+        </p>
+        <div class="hero-tags">
+          <span>手冲滤杯</span>
+          <span>意式半自动</span>
+          <span>法压壶</span>
+          <span>冷萃壶</span>
+          <span>磨豆机</span>
+          <span>分享壶与滤纸</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#category">按器具类型查找</a>
+          <a class="btn btn-ghost" href="#brew">看冲煮基本步骤</a>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="新手入门顺序">
+        <h2>新手建议的入门顺序</h2>
+        <ol>
+          <li><b>先定口味方向</b>：喜欢清爽果酸，还是偏醇厚苦甜，决定器具方向。</li>
+          <li><b>再定预算区间</b>：磨豆机优先于咖啡机，研磨均匀度对风味影响更直接。</li>
+          <li><b>只添一件新器具</b>：一次换太多变量，很难判断哪一步出了问题。</li>
+          <li><b>固定参数练手感</b>：粉量、水量、水温、时间先固定，再单项微调。</li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 器具分类 -->
+  <section id="category" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>常见咖啡器具分类</h2>
+        <p>不同器具对应不同的萃取原理和口感走向。先确认自己想喝什么，再决定买什么，比反过来更省事。</p>
+      </div>
+
+      <div class="cat-grid">
+        <div class="cat-card">
+          <div class="icon" aria-hidden="true">滤</div>
+          <h3>手冲类器具</h3>
+          <p>以注水方式控制萃取，风味层次清晰，适合喜欢清爽、果酸、香气突出的人。</p>
+          <ul>
+            <li>锥形滤杯：流速较快，风味干净</li>
+            <li>梯形滤杯：容错率相对高</li>
+            <li>细口手冲壶：控制水流稳定</li>
+            <li>滤纸与分享壶：注意尺寸匹配</li>
+          </ul>
+        </div>
+
+        <div class="cat-card">
+          <div class="icon" aria-hidden="true">压</div>
+          <h3>意式与压力类</h3>
+          <p>通过压力快速萃取，浓度高、油脂感明显，适合做浓缩、拿铁、卡布奇诺。</p>
+          <ul>
+            <li>半自动咖啡机：参数可调，需要练习</li>
+            <li>全自动咖啡机：操作简单，稳定优先</li>
+            <li>摩卡壶：明火或电陶炉加热，浓度偏高</li>
+            <li>压粉器与粉碗：影响萃取均匀度</li>
+          </ul>
+        </div>
+
+        <div class="cat-card">
+          <div class="icon" aria-hidden="true">浸</div>
+          <h3>浸泡与冷萃类</h3>
+          <p>咖啡粉与水长时间接触，操作门槛低，口感圆润，适合日常大杯饮用。</p>
+          <ul>
+            <li>法压壶：金属滤网，保留部分油脂</li>
+            <li>冷萃壶：冷藏浸泡，适合夏季</li>
+            <li>爱乐压：便携，玩法灵活</li>
+            <li>滤网目数：影响口感的干净程度</li>
+          </ul>
+        </div>
+
+        <div class="cat-card">
+          <div class="icon" aria-hidden="true">磨</div>
+          <h3>磨豆与称量</h3>
+          <p>研磨均匀度是家庭咖啡里最容易被低估的一环，直接影响萃取是否稳定。</p>
+          <ul>
+            <li>手摇磨豆机：入门友好，便携</li>
+            <li>电动磨豆机：效率高，适合高频使用</li>
+            <li>电子秤：建议带计时与 0.1g 精度</li>
+            <li>温度计：确认水温是否合适</li>
+          </ul>
+        </div>
+
+        <div class="cat-card">
+          <div class="icon" aria-hidden="true">壶</div>
+          <h3>加热与盛装</h3>
+          <p>水温稳定和保温能力，会影响整杯咖啡从第一口到最后一口的表现。</p>
+          <ul>
+            <li>温控电水壶：设定温度更省心</li>
+            <li>普通水壶加温度计：成本更低</li>
+            <li>保温分享壶：适合多人饮用</li>
+            <li>陶瓷杯：保温相对稳定</li>
+          </ul>
+        </div>
+
+        <div class="cat-card">
+          <div class="icon" aria-hidden="true">耗</div>
+          <h3>耗材与配件</h3>
+          <p>耗材属于长期支出，规格是否通用、是否容易买到，值得提前考虑。</p>
+          <ul>
+            <li>滤纸：注意型号与滤杯匹配</li>
+            <li>清洁粉与除垢剂：定期维护用</li>
+            <li>密封罐：减少咖啡豆氧化</li>
+            <li>备用胶圈、滤网等易损件</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 冲煮步骤 -->
+  <section id="brew">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>一套通用的冲煮思路</h2>
+        <p>不论用手冲还是浸泡式器具，底层逻辑都相通：控制粉水比、水温、研磨度和时间。先固定其中三项，只调一项。</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <h3>确定粉水比</h3>
+          <p>从 1:15 左右开始尝试，偏浓就加水，偏淡就减少水量或增加粉量。记录比例，方便下次复现。</p>
+        </div>
+        <div class="step">
+          <h3>设定水温</h3>
+          <p>中浅烘焙常用较高水温，深烘焙可适当降低。没有温控壶时，水烧开后静置一会儿再注水。</p>
+        </div>
+        <div class="step">
+          <h3>调整研磨度</h3>
+          <p>味道偏苦涩、流速慢，可调粗；味道偏酸薄、流速快，可调细。每次只动一小格。</p>
+        </div>
+        <div class="step">
+          <h3>记录与复盘</h3>
+          <p>把粉量、水量、水温、时间和口感简单记下来。稳定的记录比频繁换器具更有用。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 选购要点 -->
+  <section id="buy" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>选购咖啡器具时值得关注的几点</h2>
+        <p>器具不是越贵越合适。使用频率、清洗难度、耗材是否好买，都会影响你能否长期用下去。</p>
+      </div>
+
+      <div class="buy-grid">
+        <ul class="buy-list">
+          <li>
+            <b>先看使用频率</b>
+            <span>每天一杯和偶尔周末做一次，适合的器具差别很大。高频使用更值得投入易清洗、出杯快的设备。</span>
+          </li>
+          <li>
+            <b>再看清洗难度</b>
+            <span>结构越复杂，残留咖啡油和细粉的位置越多。选购时可以想象一下每次用完要拆洗几个部件。</span>
+          </li>
+          <li>
+            <b>确认耗材通用性</b>
+            <span>滤纸、胶圈、滤网属于长期消耗品。规格通用、容易买到的型号，后续使用更省心。</span>
+          </li>
+          <li>
+            <b>关注尺寸与收纳</b>
+            <span>厨房台面有限时，优先考虑体积小、可叠放或可拆解的器具，避免买回来闲置。</span>
+          </li>
+          <li>
+            <b>看材质与做工</b>
+            <span>玻璃、不锈钢、陶瓷各有特点。接触热水的部件，建议留意是否耐高温、是否有异味。</span>
+          </li>
+          <li>
+            <b>预留升级空间</b>
+            <span>如果打算长期做咖啡，磨豆机和称量工具可以适当选好一些，它们对结果的影响更直接。</span>
+          </li>
+        </ul>
+
+        <div class="note-box">
+          <h3>容易踩的几个坑</h3>
+          <ul>
+            <li>一次性买齐所有器具，结果只用其中一两件。</li>
+            <li>只升级咖啡机，却一直用不均匀的研磨。</li>
+            <li>忽略水质，硬度过高的水会影响风味表现。</li>
+            <li>不记录参数，每次都靠感觉，很难稳定复现。</li>
+            <li>长期不清洁，油脂残留带来杂味，还影响出水。</li>
+            <li>把“别人的推荐参数”直接照搬，忽略豆子差异。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 对比表 -->
+  <section id="compare">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>几种常见方式的直观对比</h2>
+        <p>下表用于帮助判断方向，具体表现还会受豆子、研磨、水质和操作习惯影响，仅供参考。</p>
+      </div>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>方式</th>
+              <th>操作难度</th>
+              <th>口感倾向</th>
+              <th>清洗复杂度</th>
+              <th>适合场景</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>手冲</td>
+              <td>中等，需要练习注水</td>
+              <td>层次清晰，酸质与香气较突出</td>
+              <td>较低，滤纸即弃</td>
+              <td>想认真品风味、单人饮用</td>
+            </tr>
+            <tr>
+              <td>意式半自动</td>
+              <td>较高，参数较多</td>
+              <td>浓度高，油脂感明显</td>
+              <td>中等，需清洁粉碗与冲煮头</td>
+              <td>常喝拿铁、愿意投入时间练习</td>
+            </tr>
+            <tr>
+              <td>法压壶</td>
+              <td>低，容易上手</td>
+              <td>圆润醇厚，细粉感稍明显</td>
+              <td>中等，需拆洗滤网</td>
+              <td>日常大杯、多人分享</td>
+            </tr>
+            <tr>
+              <td>冷萃</td>
+              <td>低，但需要提前准备</td>
+              <td>柔和顺口，酸苦感偏弱</td>
+              <td>中等，滤网需仔细冲洗</td>
+              <td>夏季、提前批量制作</td>
+            </tr>
+            <tr>
+              <td>爱乐压</td>
+              <td>低到中等，玩法灵活</td>
+              <td>可浓可淡，调整空间大</td>
+              <td>较低，部件可拆</td>
+              <td>出差旅行、空间有限</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 文章 -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>专题与实用内容</h2>
+        <p>围绕器具使用中经常遇到的具体问题展开，方便按需查阅。</p>
+      </div>
+
+      <div class="art-grid">
+        <article class="post">
+          <span class="tag">手冲入门</span>
+          <h3>手冲咖啡流速忽快忽慢，先检查这几点</h3>
+          <p>流速异常通常和研磨度、滤纸贴合、注水方式有关。按顺序排查，比盲目换豆子更有效。</p>
+          <a class="more" href="#faq">查看相关问答 →</a>
+        </article>
+
+        <article class="post">
+          <span class="tag">磨豆机</span>
+          <h3>手摇磨豆机怎么选：从刀盘到调节刻度</h3>
+          <p>刀盘类型决定研磨均匀度，调节结构影响使用手感。选购时可以先明确主要用途。</p>
+          <a class="more" href="#buy">查看选购要点 →</a>
+        </article>
+
+        <article class="post">
+          <span class="tag">清洁保养</span>
+          <h3>咖啡器具的日常清洁周期参考</h3>
+          <p>哪些部件需要每次清洗，哪些可以按周处理，长期坚持能明显减少杂味。</p>
+          <a class="more" href="#care">查看保养建议 →</a>
+        </article>
+
+        <article class="post">
+          <span class="tag">冷萃</span>
+          <h3>冷萃为什么容易做淡：粉水比与时间的关系</h3>
+          <p>冷萃萃取效率低于热水，粉水比和时间需要重新设定，不能直接套用手冲参数。</p>
+          <a class="more" href="#compare">查看方式对比 →</a>
+        </article>
+
+        <article class="post">
+          <span class="tag">水质</span>
+          <h3>水对咖啡味道的影响，比想象中更大</h3>
+          <p>矿物质含量会影响萃取效率与口感表现。了解基本概念，有助于判断是否需要调整用水。</p>
+          <a class="more" href="#faq">查看相关问答 →</a>
+        </article>
+
+        <article class="post">
+          <span class="tag">咖啡豆</span>
+          <h3>烘焙度与器具搭配的简单思路</h3>
+          <p>浅烘与深烘在研磨、水温和萃取时间上的取向不同，搭配得当更容易做出顺口的一杯。</p>
+          <a class="more" href="#category">查看器具分类 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 保养 -->
+  <section id="care">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>清洁与保养：决定器具能用多久</h2>
+        <p>咖啡油脂和细粉残留会带来杂味，也会影响出水与密封效果。养成固定清洁习惯，比事后深度清洗更轻松。</p>
+      </div>
+
+      <div class="care-grid">
+        <div class="care-item">
+          <h3>每次使用后冲洗</h3>
+          <p>滤杯、分享壶、法压壶滤网等接触咖啡的部分，用完尽快用温水冲洗，避免细粉干结在缝隙里。</p>
+        </div>
+        <div class="care-item">
+          <h3>定期处理油脂残留</h3>
+          <p>玻璃与不锈钢部件可用温水配合中性清洁剂清洗；有异味时，按产品说明使用专用清洁产品。</p>
+        </div>
+        <div class="care-item">
+          <h3>关注密封件状态</h3>
+          <p>胶圈老化会导致密封不严、压力不足。发现变硬、开裂或明显变形时，及时更换。</p>
+        </div>
+        <div class="care-item">
+          <h3>加热类设备注意除垢</h3>
+          <p>水质偏硬的地区，加热部件容易积水垢。按说明书建议的周期除垢，有助于保持加热效率。</p>
+        </div>
+        <div class="care-item">
+          <h3>磨豆机避免残粉堆积</h3>
+          <p>定期清理刀盘与出粉通道的残粉，可以减少新旧咖啡粉混杂带来的味道干扰。</p>
+        </div>
+        <div class="care-item">
+          <h3>存放环境保持干燥</h3>
+          <p>滤纸、咖啡豆和器具建议放在阴凉干燥处，避免受潮、串味和阳光直射。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>常见问题</h2>
+        <p>以下问题在家庭咖啡场景中出现频率较高，回答以通用经验为主，具体请结合自己使用的器具说明。</p>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>刚开始接触咖啡器具，应该先买什么？</summary>
+          <p>如果只是想先试试在家做咖啡，可以从操作门槛较低、清洗方便的方式入手，例如手冲或法压壶。同时建议先准备一台研磨相对均匀的磨豆机和一台带计时功能的电子秤，这两样对结果的影响往往比换更贵的冲煮器具更明显。</p>
+        </details>
+
+        <details>
+          <summary>手冲咖啡总是偏苦或者偏酸，怎么调整？</summary>
+          <p>偏苦常见原因是萃取过度，可以尝试把研磨调粗一点、降低水温或缩短总时间；偏酸偏薄则可能是萃取不足，方向相反。建议每次只调整一个变量，并把结果记录下来，逐步找到适合自己的组合。</p>
+        </details>
+
+        <details>
+          <summary>磨豆机为什么比咖啡机更值得先升级？</summary>
+          <p>研磨均匀度会直接影响萃取的稳定性。如果颗粒粗细差异很大，细粉容易过度萃取、粗粒又萃取不足，最终呈现的味道会杂乱。相比之下，研磨更均匀之后，很多器具的表现都会跟着改善。</p>
+        </details>
+
+        <details>
+          <summary>咖啡器具需要每天清洗吗？</summary>
+          <p>接触咖啡的部分建议每次使用后都冲洗，尤其是滤网、粉碗和分享壶。深度清洁可以按使用频率定期进行。长期不清洁会积累油脂和细粉，带来杂味，也可能影响器具的正常出水或密封。</p>
+        </details>
+
+        <details>
+          <summary>冷萃和手冲可以用同一款豆子吗？</summary>
+          <p>可以，但参数需要重新调整。冷萃以低温长时间浸泡为主，萃取效率与热水不同，粉水比和浸泡时间通常都要单独设定，直接沿用手冲参数容易偏淡。</p>
+        </details>
+
+        <details>
+          <summary>水质对咖啡味道影响大吗？</summary>
+          <p>有一定影响。水中矿物质含量会影响萃取效率和口感表现，硬度过高或过低都可能让风味失衡。如果对味道比较在意，可以先了解本地水质情况，再决定是否需要调整用水。</p>
+        </details>
+
+        <details>
+          <summary>家里空间不大，怎么控制器具数量？</summary>
+          <p>优先选择功能可以覆盖多种需求、体积小且易收纳的器具，例如可拆解或可叠放的款式。购买前先想清楚主要在什么场景下使用，避免一次购入过多重复功能的设备。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 提示条 -->
+  <section>
+    <div class="wrap">
+      <div class="tip-strip">
+        <p><strong>一句话建议：</strong>先把一种器具用熟，把粉量、水量、水温、时间固定下来，再考虑添置新设备。稳定的重复，比不断更换器具更容易带来进步。</p>
+        <a class="btn btn-primary" href="#category">回到器具分类</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <h3>东具咖啡</h3>
+        <p>围绕咖啡器具与冲煮方式整理实用内容，帮助家庭咖啡爱好者少走弯路，稳定做出一杯顺口的咖啡。</p>
+      </div>
+      <div>
+        <h3>器具分类</h3>
+        <ul>
+          <li><a href="#category">手冲类器具</a></li>
+          <li><a href="#category">意式与压力类</a></li>
+          <li><a href="#category">浸泡与冷萃类</a></li>
+          <li><a href="#category">磨豆与称量</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>实用内容</h3>
+        <ul>
+          <li><a href="#brew">冲煮基本步骤</a></li>
+          <li><a href="#buy">选购要点</a></li>
+          <li><a href="#compare">方式对比</a></li>
+          <li><a href="#care">清洁保养</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>帮助</h3>
+        <ul>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#brew">参数调整思路</a></li>
+          <li><a href="#buy">避坑提醒</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>东具咖啡 · 咖啡器具与冲煮知识分享</span>
+      <span>内容以通用经验整理，具体操作请以所购器具的说明为准</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 平滑定位时避免固定头部遮挡
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener('click', function(e){
+      var id = this.getAttribute('href');
+      if(id.length < 2) return;
+      var target = document.querySelector(id);
+      if(!target) return;
+      e.preventDefault();
+      var head = document.querySelector('header.site-head');
+      var offset = head ? head.offsetHeight + 12 : 12;
+      var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+
+  // 同一时间只展开一个常见问题
+  var faqItems = document.querySelectorAll('.faq details');
+  faqItems.forEach(function(item){
+    item.addEventListener('toggle', function(){
+      if(item.open){
+        faqItems.forEach(function(other){
+          if(other !== item) other.open = false;
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+  </html>
